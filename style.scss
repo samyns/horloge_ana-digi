@@ -1,0 +1,91 @@
+$taille : 35vw;
+$rota : 23deg;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    & .centre{
+        width: 1vw;
+        height: 1vw;
+        position: absolute;
+        background-color: black;
+    }
+    & .container{
+        position: relative;
+        width: $taille;
+        height: $taille;
+        border: solid black 3px;
+        display: flex;
+        justify-content: center;
+        & .heures{
+            width: 10vw;
+            height: 1vw;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            left: 17.5vw;
+            top: 17vw;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            transform: rotate($rota);
+            transform-origin: left;
+            & .h{
+                transform: rotate(-23deg);
+                color: black;
+                position: relative;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: arial;         
+            }
+        }
+        & .minutes{
+            width: 15vw;
+            height: 0.7vw;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            left: 17.5vw;
+            top: 17vw;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            transform: rotate(-26deg);
+            transform-origin: left;
+            & .m{
+                transform: rotate(26deg);
+                color: black;
+                position: relative;
+                font-size: 20px;
+                font-weight: 200;
+                font-family: arial; 
+            }
+        }
+        & .secondes{
+            width: 17vw;
+            height: 0.5vw;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            left: 17.5vw;
+            top: 17vw;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            transform: rotate(-90deg);
+            transform-origin: left;
+            & .s{
+                transform: rotate(90deg);
+                color: black;
+                position: relative;
+                font-size: 17px;
+                font-weight: 100;
+                font-family: arial; 
+            }
+        }
+    }
+}
+
