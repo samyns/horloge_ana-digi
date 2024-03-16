@@ -31,6 +31,10 @@ function mettreAJourHeure() {
     var degM = (minutes * 360) / 60 - 90;
     var degH = ((heure - 12) * 360) / 12 - 90;
 
+    let oppositeDegS = (degS >= -90 && degS < 0) ? -degS : -degS;
+    let oppositeDegM = (degM >= -90 && degM < 0) ? -degM : -degM;
+    let oppositeDegH = (degH >= -90 && degH < 0) ? -degH : -degH;
+    
     // Mise à jour de la rotation de l'élément '.secondes'
     const sec = document.querySelector('.secondes');
     const min = document.querySelector('.minutes');
@@ -42,22 +46,18 @@ function mettreAJourHeure() {
     // Mise à jour de la rotation de chaque élément avec la classe '.elementsS'
     const elementsSec = document.querySelectorAll('.s');
     elementsSec.forEach(function(element) {
-        element.style.transform = `rotate(-${degS}deg)`;
+        element.style.transform = `rotate(${oppositeDegS}deg)`;
     });
 
     const elementsMin = document.querySelectorAll('.m');
     elementsMin.forEach(function(element) {
-        element.style.transform = `rotate(-${degM}deg)`;
+        element.style.transform = `rotate(${oppositeDegM}deg)`;
     });
 
     const elementsHeu = document.querySelectorAll('.h');
     elementsHeu.forEach(function(element) {
-        element.style.transform = `rotate(-${degH}deg)`;
-    });
+        element.style.transform = `rotate(${oppositeDegH}deg)`;
+   });
 }
-
-// Appeler la fonction pour la première fois
 mettreAJourHeure();
-
-// Mettre à jour l'heure toutes les secondes
 setInterval(mettreAJourHeure, 1000);

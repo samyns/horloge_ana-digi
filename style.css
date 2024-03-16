@@ -6,12 +6,6 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-body .centre {
-  width: 1vw;
-  height: 1vw;
-  position: absolute;
-  background-color: black;
-}
 body .container {
   position: relative;
   width: 35vw;

@@ -7,12 +7,6 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    & .centre{
-        width: 1vw;
-        height: 1vw;
-        position: absolute;
-        background-color: black;
-    }
     & .container{
         position: relative;
         width: $taille;
