@@ -13,6 +13,7 @@ body .container {
   border: solid black 3px;
   display: flex;
   justify-content: center;
+  border-radius: 50%;
 }
 body .container .heures {
   width: 10vw;
@@ -32,7 +33,7 @@ body .container .heures .h {
   transform: rotate(-23deg);
   color: black;
   position: relative;
-  font-size: 20px;
+  font-size: 1.6vw;
   font-weight: bold;
   font-family: arial;
 }
@@ -54,7 +55,7 @@ body .container .minutes .m {
   transform: rotate(26deg);
   color: black;
   position: relative;
-  font-size: 20px;
+  font-size: 1.6vw;
   font-weight: 200;
   font-family: arial;
 }
@@ -76,7 +77,7 @@ body .container .secondes .s {
   transform: rotate(90deg);
   color: black;
   position: relative;
-  font-size: 17px;
+  font-size: 1.4vw;
   font-weight: 100;
   font-family: arial;
 }
